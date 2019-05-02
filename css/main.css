@@ -448,8 +448,8 @@ ul.list li {
     }
     
     /* Who We Are section */
-    .who-content h2, .who-content h3, .who-content ul.list {
-        text-align: center;
+    .who-content p {
+        text-align: left;
     }
 
 
@@ -464,7 +464,26 @@ ul.list li {
         padding: 0 2rem;
         overflow: hidden;
     }
-    
+      /* Who We Are section */
+    #who .container {
+        max-width: 100vw;
+    }
+    #who .container {
+        flex-direction: row;
+    }
+    .who-img {
+        max-width: 50%;
+    }
+    .who-content {
+        max-width: 45%;
+    }
+    .who-img img {
+        width: 100%;
+        height: auto;
+    }
+
+
+
 }
 
 @media only screen and (min-width: 1300px) {
