@@ -29,12 +29,12 @@
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #93cb52;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #93cb52;
     text-shadow: none;
 }
 
@@ -116,14 +116,7 @@ h1 {
     line-height: 1.1;
 }
 
-h2 {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-    line-height: 1.1;
-}
-
+h2,
 h3,
 h4,
 h5,
@@ -156,7 +149,7 @@ header {
     color: #ffffff;
 }
 
-header div.container {
+header .container {
     display: flex;
     flex-direction: column;
 }
@@ -245,9 +238,40 @@ a.button:hover {
 
 /*  - - - - - Section Styles - What We Do - - - - -  */
 
+#what .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem 0;
+}
 
+#what .container h2 {
+    margin: 0 auto;
+    /* text-align: center; */
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
 
+#what .container .items {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+/* Note: services divs are the direct child of this element */
 
+#what .container .items .services {
+    /* flex: 1; */
+    padding: 1rem;
+}
+
+#what .items .services i {
+    background: #93cb52;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
 
 /*  - - - - - Section Styles - Who We Are - - - - -  */
 
@@ -360,7 +384,7 @@ a.button:hover {
         top: 0;
         z-index: 1;
     }
-    header div.container {
+    header .container {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -384,8 +408,17 @@ a.button:hover {
     p.lead {
         font-size: 1.3rem;
     }
-        
-
+    
+    /* What We Do section */
+    #what .container .items {
+        display: flex;
+        flex-direction: row;
+    }
+    #what .container .items .services {
+        /* flex: 1; */
+        padding: 1rem;
+    }
+    
 
 }
 
