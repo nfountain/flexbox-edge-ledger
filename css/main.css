@@ -108,6 +108,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 auto;
+}
+
+
 p {
     margin: 0.75rem 0;
 }
@@ -125,6 +135,7 @@ a {
 
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 1rem;
     background: #333333;
@@ -133,17 +144,26 @@ header {
 
 header .logo {
     width: 100%;
+    text-align: center;
 }
 
 header .logo .text-primary-color {
     color: #93cd52;
 }
 
+header nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 nav ul {
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
+    justify-content: space-around;
     list-style-type: none;
+    padding-left: 0;
 }
 
 nav ul li a {
@@ -157,7 +177,42 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/*  - - - - - Main / Showcase Styles - - - - -  */
 
+#showcase {
+    height: 100vh;
+    background: #333333 url('../img/showcase.jpg') no-repeat center center/cover;
+    color: #ffffff;
+}
+
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%; /*makes the content div the same height as its parent container.*/
+    padding: 0 2rem;
+
+    /* Overlay - position is set to be same as the content position instead of trying to hack a 'position: relative' on each viewport */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.l-heading {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+p.lead {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+a.button {
+    color: #ffffff;
+
+}
 
  /* ==========================================================================
    Helper classes
@@ -246,19 +301,35 @@ nav ul li a:hover {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width 768px) {
+@media only screen and (min-width: 760px) {
     /* Style adjustments for viewports that meet the condition */
+
+    /* Header and Nav section */
     header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         justify-content: space-between;
         position: sticky;
         top: 0;
         z-index: 1;
-        justify-content: space-between;
     }
     header .logo {
-        width: auto;
+        width: 20%;
     }
-    
+
+    header nav {
+        justify-content: flex-end;
+    }
+
+    /* Main / Hero section */
+    .l-heading {
+        font-size: 4rem;
+    }
+    p.lead {
+        font-size: 1.3rem;
+    }
+        
 
 
 }
