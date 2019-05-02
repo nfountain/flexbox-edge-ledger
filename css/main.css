@@ -109,8 +109,21 @@ body {
     line-height: 1.4;
 }
 
-h1,
-h2,
+h1 {
+    margin: 0 auto;
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+h2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
 h3,
 h4,
 h5,
@@ -136,19 +149,23 @@ a {
 
 header {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 1rem;
     background: #333333;
     color: #ffffff;
 }
 
-header .logo {
-    width: 100%;
-    text-align: center;
+header div.container {
+    display: flex;
+    flex-direction: column;
 }
 
-header .logo .text-primary-color {
+header h2.logo {
+    width: 100%;
+}
+
+.primary-color {
     color: #93cb52;
 }
 
@@ -187,6 +204,13 @@ nav ul li a:hover {
 }
 
 #showcase .showcase-content {
+    height: 100%;
+
+    /* Overlay - position is set to be same as the content position instead of trying to hack a 'position: relative' on each possible viewport size. */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#showcase .showcase-content .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -195,17 +219,9 @@ nav ul li a:hover {
     height: 100%; /*makes the content div the same height as its parent container.*/
     padding: 0 2rem;
 
-    /* Overlay - position is set to be same as the content position instead of trying to hack a 'position: relative' on each viewport */
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.l-heading {
-    font-size: 3rem;
-    margin-bottom: 0.75rem;
-    line-height: 1.1;
-}
-
-p.lead {
+p.intro-copy {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -226,6 +242,23 @@ a.button:hover {
     background: #333333;
     color: #ffffff;
 }
+
+/*  - - - - - Section Styles - What We Do - - - - -  */
+
+
+
+
+
+/*  - - - - - Section Styles - Who We Are - - - - -  */
+
+
+
+
+
+/*  - - - - - Footer / Contact Section Styles - - - - -  */
+
+
+
 
  /* ==========================================================================
    Helper classes
@@ -319,16 +352,25 @@ a.button:hover {
 
     /* Header and Nav section */
     header {
-        display: flex;
+        /* display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-between; */
         position: sticky;
         top: 0;
         z-index: 1;
     }
-    header .logo {
+    header div.container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header h2.logo {
         width: 30%;
+        text-align: left;
+        padding-left: 1rem;
     }
 
     header nav {
@@ -336,7 +378,7 @@ a.button:hover {
     }
 
     /* Main / Hero section */
-    .l-heading {
+    h1 {
         font-size: 4rem;
     }
     p.lead {
@@ -347,8 +389,15 @@ a.button:hover {
 
 }
 
-@media only screen and (min-width 1100px) {
+@media only screen and (min-width: 1100px) {
     /* Style adjustments for viewports that meet the condition */
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 2 rem;
+        overflow: hidden;
+    }
+    
 }
 
 @media print,
