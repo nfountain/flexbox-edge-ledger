@@ -342,18 +342,26 @@ ul.list li {
 
 /*  - - - - - Contact Section Styles - - - - -  */
 
+/* Keeping in case I change the background to the grey
 #contact {
     background-color: #93cb52;
     color: #ffffff;
-}
+} */
 
 #contact .container {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
 }
 
-.contact-form, .contact-form form {
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: #93cb52;
+    color: #ffffff;
+}
+
+.contact-form form {
     display: flex;
     flex-direction: column;
 }
@@ -375,6 +383,12 @@ ul.list li {
     margin: 0.75rem 0;
 }
 
+iframe {
+    margin: 1.5rem 0;
+    padding: 0;
+    width: 100%;
+    height: 400px;
+}
 
 /*  - - - - - Footer Styles - - - - -  */
 
@@ -521,8 +535,19 @@ ul.list li {
         max-width: 17%;
     }
     
-
-
+    /* Contact section */
+    #contact .container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .contact-form, .map {
+        flex: 1;
+    }
+    iframe {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
 
 }
 
