@@ -131,6 +131,7 @@ h6 {
 
 p {
     margin: 0.75rem 0;
+    font-size: 1rem;
 }
 
 ul {
@@ -220,12 +221,12 @@ nav ul li a:hover {
 
 }
 
-p.intro-copy {
+.intro-copy {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 
-a.button {
+.button {
     color: #ffffff;
     background: #93cb52;
     padding: 0.5rem 2rem;
@@ -233,13 +234,8 @@ a.button {
     border-radius: 5px;
 }
 
-a.button:hover {
+.button:hover {
     background: #7ab436;
-}
-
-.btn-dark {
-    background: #333333;
-    color: #ffffff;
 }
 
 /*  - - - - - Section Styles - What We Do - - - - -  */
@@ -253,8 +249,6 @@ a.button:hover {
 }
 
 #what .container h2 {
-    /* margin: 0 auto;
-    font-size: 2rem; */
     margin-bottom: 0.75rem;
     line-height: 1.1;
 }
@@ -264,7 +258,6 @@ a.button:hover {
     flex-direction: column;
     padding: 1rem;
 }
-/* Note: services divs are the direct child of this element */
 
 #what .container .items .services {
     padding: 1rem;
@@ -323,10 +316,6 @@ ul.list li {
 
 /*  - - - - - Section Styles - Our Clients - - - - -  */
 
-#clients {
-    display: flex;
-}
-
 #clients .container {
     display: flex;
     flex-direction: column;
@@ -341,7 +330,8 @@ ul.list li {
 
 #clients .items div {
     display: flex;
-    max-width: 35%;
+    width: 35%;
+    max-width: 140px;
     margin: 1rem auto;
 }
 
@@ -350,7 +340,44 @@ ul.list li {
     height: 100%;
 }
 
-/*  - - - - - Footer / Contact Section Styles - - - - -  */
+/*  - - - - - Contact Section Styles - - - - -  */
+
+#contact {
+    background-color: #93cb52;
+    color: #ffffff;
+}
+
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.contact-form, .contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0.75rem 0;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 0.5rem;
+}
+
+.dark {
+    background: #333333;
+    color: #ffffff;
+    margin: 0.75rem 0;
+}
+
+
+/*  - - - - - Footer Styles - - - - -  */
+
 
 
 
@@ -538,6 +565,10 @@ ul.list li {
         max-width: 12%;
     }
 
+    /* Contact / Map section */
+    .contact-form, .map {
+        max-width: 50%;
+    }
 
 }
 
