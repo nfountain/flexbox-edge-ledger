@@ -342,11 +342,10 @@ ul.list li {
 
 /*  - - - - - Contact Section Styles - - - - -  */
 
-/* Keeping in case I change the background to the grey
 #contact {
     background-color: #93cb52;
     color: #ffffff;
-} */
+}
 
 #contact .container {
     display: flex;
@@ -357,8 +356,8 @@ ul.list li {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
-    background-color: #93cb52;
-    color: #ffffff;
+    /* background-color: #93cb52;
+    color: #ffffff; */
 }
 
 .contact-form form {
@@ -384,7 +383,7 @@ ul.list li {
 }
 
 iframe {
-    margin: 1.5rem 0;
+    margin: 0;
     padding: 0;
     width: 100%;
     height: 400px;
@@ -392,9 +391,21 @@ iframe {
 
 /*  - - - - - Footer Styles - - - - -  */
 
+#pg-footer {
+    display: flex;
+    justify-content: center;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+}
 
+#pg-footer .container {
+    margin: 1.5rem;
+}
 
-
+#pg-footer .container p {
+    margin: 0;
+}
 
  /* ==========================================================================
    Helper classes
