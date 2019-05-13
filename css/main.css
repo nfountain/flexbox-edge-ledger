@@ -356,8 +356,6 @@ ul.list li {
     display: flex;
     flex-direction: column;
     padding: 1.5rem 1rem;
-    /* background-color: #93cb52;
-    color: #ffffff; */
 }
 
 .contact-form form {
@@ -495,7 +493,6 @@ iframe {
    ========================================================================== */
 
 @media only screen and (min-width: 760px) {
-    /* Style adjustments for viewports that meet the condition */
 
     /* Header and Nav section */
     header {
@@ -548,7 +545,6 @@ iframe {
         margin-bottom: 0.75rem;
     }
     
-    
     /* Who We Are section */
     .who-content {
         padding: 2rem;
@@ -558,6 +554,9 @@ iframe {
     }
 
     /* Our Clients section */
+    #what .container {
+        padding: 2rem;
+    }
     #clients .items div {
         max-width: 15%;
     }
@@ -567,9 +566,16 @@ iframe {
         flex-direction: row;
         flex-wrap: nowrap;
     }
+    .contact-form {
+        padding: 2rem 0;
+    }
     .contact-form, .map {
         flex: 1;
         flex-basis: 50%;
+    }
+    .contact-form p,
+    .contact-form form {
+        padding: 0 2rem;
     }
     iframe {
         margin: 0;
