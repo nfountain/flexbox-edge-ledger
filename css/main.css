@@ -165,6 +165,10 @@ header h2.logo,
     text-align: center;
 }
 
+h2.logo a {
+    color: #ffffff;
+}
+
 .primary-color {
     color: #93cb52;
 }
