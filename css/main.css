@@ -622,7 +622,8 @@ iframe {
 
 @media only screen and (min-width: 1100px) {
     /* Style adjustments for viewports that meet the condition */
-    .container {
+    .container,
+    #who .container {
         max-width: 1100px;
         margin: 0 auto;
         padding: 0 2rem;
@@ -646,19 +647,6 @@ iframe {
         max-width: 12%;
     }
 
-    /* Contact / Map section */
-    .contact-form, .map {
-        /* max-width: 50%; */
-    }
-
-}
-
-@media only screen and (min-width: 1300px) {
-    /* Style adjustments for viewports that meet the condition */
-    #who .container {
-        max-width: 1300px;
-    }
-    
 }
 
 
