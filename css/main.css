@@ -358,6 +358,10 @@ ul.list li {
     padding: 1.5rem 1rem;
 }
 
+.dk-txt {
+    color: #333333;
+}
+
 .contact-form form {
     display: flex;
     flex-direction: column;
